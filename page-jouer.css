@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body{
+    background-image: url(/img/background-mario.jpeg);
+    background-size: contain;
+    background-repeat: repeat-x repeat-y;
+    margin: auto 8rem;
+}
+
+nav {
+  border: solid 2px #EA319A;
+  border-radius: 1rem;
+}
+
+h1{
+    text-align: center;
+    color: #EA319A;
+}
+a{
+    text-decoration: none;
+    color: #EA319A;
+    font-size: large;
+    font-weight: bold;
+}
+a:hover {
+  color: white;
+}
+nav li{
+    
+    list-style: none;
+    display: flex;
+}
+nav ul {
+    
+    display: flex;
+    justify-content: space-evenly;
+
+}
+#game{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 15rem;
+
+}
+
+.grid {
+    max-width: 960px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .card {
+    position: relative;
+    -webkit-transition: all .4s linear;
+    -o-transition: all .4s linear;
+    transition: all .4s linear;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    margin: 5px;
+  }
+
+    .card,
+    .back,
+    .front {
+    height: 150px;
+    width: 150px;
+    }
+
+    .back,
+    .front {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+    .front {
+    background: #F2CB02 url('img/sticker-block-interrogation.jpeg') no-repeat center center / contain;
+    border: solid 4px #ffffff;
+    border-radius: 1rem;
+  }
+
+    .back {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  .selected {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  
+  .match .front {
+    background-image: none !important;
+  }
+/*Mon compteur de coup et scors*/
+    .game-stats {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: #F2CB02;
+      color: #EA319A;
+      font-size: 1.2rem;
+    }
+  
+    .moves-counter,
+    .score-counter {
+      font-weight: bold;
+    }
